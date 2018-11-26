@@ -1,0 +1,13 @@
+<!--pages/in/in.wxml-->
+<view class='container'>
+  <view class="select">
+    <text>请选择您的初始身份</text>
+     <view class="line"></view> 
+  </view>
+    <button class='role_button' hover-class='hover' wx:if="{{!has_init_group}}" bindtap="doHeadMaster">我是一名班主任</button>
+    <button id='teacher' class='role_button' hover-class='hover' disabled="{{!has_init_group}}" bindtap="doTeacher">我是一名老师 </button>
+    <button id='parent' class='role_button' hover-class='hover' disabled="{{!has_init_group}}" bindtap="doParent">我是一位家长</button>
+    <view class='instruction'>
+      <text>温馨提示：如果您不是班主任，请耐心等待班主任初始化后再使用本系统。</text>
+    </view>
+</view>

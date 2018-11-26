@@ -1,0 +1,57 @@
+<!--[msg|主界面]  -->
+<view class='container'>
+  <view class='section_white'>
+    <text class='activity'>活动</text>
+    <text class='time_period'>时间段</text>
+  </view>
+  <scroll-view  class="time_list" scroll-y="true" scrollTop="0">
+    <view class='section_note' wx:if='{{timeList.length==0}}'>
+      <text class='text_note'>暂无作息表</text>
+    </view>
+    <block wx:for="{{timeList}}">
+      <view class="{{index==selectIndex?'section_select':'section_white'}}" 
+        hover-class='hover' data-selectindex='{{index}}' bindtap="bindSelectItem">
+        <text class='activity'>{{item.activity}}</text>
+        <text class='time_period'>{{item.timePeriod}}</text>
+      </view>
+    </block>
+  </scroll-view>
+  <view class='button_group' wx:if="{{isHeadMaster}}">
+    <button hover-class='hover' bindtap='bindEditButton'
+        class='button'>{{editState?'完成':'编辑'}}</button>
+    <button wx:if="{{editState}}" hover-class='hover' bindtap='bindInsert' class='button'>插入</button>
+    <button wx:if="{{editState}}" hover-class='hover' bindtap='bindDelete' class='button'>删除</button>
+    <button wx:if="{{editState}}" hover-class='hover' bindtap='bindModify' class='button'>修改</button>
+    <button wx:if="{{editState}}" hover-class='hover' bindtap='bindUp' class='button'>上移</button>
+    <button wx:if="{{editState}}" hover-class='hover' bindtap='bindDown' class='button'>下移</button>
+  </view>
+</view>
+
+<!--[msg|对话框弹出]-->
+<view class='mask' wx:if="{{dialogState}}">
+  <view class='dialog'>
+  <form bindsubmit='bindDialog'>
+    <view class="dialog_header">
+      <text class='text_header'>更改时间表</text>
+    </view>
+    <view class="dialog_section">
+      <text class="attr_name">活动名称</text>
+      <input name="activity_name" value="{{activity_name}}" auto-focus />
+    </view>
+    <view class="dialog_section">
+      <text>开始时间</text>
+      <picker name="start_time" mode="time" value="{{start_time}}" start="00:00" end="24:00" bindchange="bindStartTimeChange">
+        <view>{{start_time}}</view>
+      </picker>
+    </view>
+    <view class="dialog_section">
+      <text>结束时间</text>
+      <picker name="end_time" mode="time" value="{{end_time}}" start="00:00" end="24:00" bindchange="bindEndTimeChange">
+        <view>{{end_time}}</view>
+      </picker>
+    </view>
+    <button class='submit' hover-class='hover' form-type='submit'>确定</button>
+  </form>
+</view>
+</view> 
+

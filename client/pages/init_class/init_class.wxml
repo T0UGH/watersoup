@@ -1,0 +1,29 @@
+<form bindsubmit='formSubmit'>
+  <view class="container">
+    <view class="table_header">
+      <view class="line">
+        <label id='student_id'>学号</label>
+        <label id='student_name'>姓名</label>
+        <text class='sex0'>男</text> 
+        <text class='sex1'>女</text> 
+      </view>
+    </view>
+    <scroll-view  class="student_list" scroll-y="true" scrollTop="0">
+      <view wx:for="{{emptyArray}}"  wx:key="*this" class="line">
+        <input placeholder='请输入学号' name='{{index}}.id'/> 
+        <input placeholder='请输入姓名' name='{{index}}.name'/>
+        <radio-group name="{{index}}.sex" style="width=200rpx;margin-left:20rpx">
+          <radio class='select' color='rgb(68,138,255)' value="0"/>
+          <radio class='select' color='rgb(68,138,255)' value="1"/>
+        </radio-group>
+      </view>
+    </scroll-view>
+    <view class='subtract_button_view' hover-class='hover' hover-stay-time='100'>
+      <image class='subtract_button' bindtap='subStudent' src='{{subtract_button}}'></image>
+    </view>
+    <view class='add_button_view' hover-class='hover' hover-stay-time='100'>
+      <image class='add_button' bindtap='addStudent' src='{{add_button}}'></image>
+    </view>
+  </view>
+  <button class='create_button' hover-class='hover' formType='submit'>下一步</button>
+</form>

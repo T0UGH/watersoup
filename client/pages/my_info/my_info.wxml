@@ -1,0 +1,30 @@
+<view class='container_info'>
+    <view class="section_tx">
+    <text class='info_tx'>头像</text>
+    <image class='head_img' src='{{info.avatarUrl}}'></image>
+  </view>
+  <view class="section_info">
+    <text class='info_title'>昵称</text>
+    <text class='info_attr'>{{info.nickname}}</text>
+  </view>
+  <view class="section_info" wx:if="{{state==1}}">
+    <text class='info_title'>课程</text>
+    <text class='info_attr'>{{info.course}}</text>
+  </view>
+  <view class="section_info" wx:if="{{state==0}}">
+    <text class='info_title'>学生</text>
+    <text class='info_attr'>{{info.child_nickname}}</text>
+  </view>
+  <view class="section_info" wx:if="{{state==0}}">
+    <text class='info_title'>学号</text>
+    <text class='info_attr'>{{info.student_id}}</text>
+  </view>
+  <view class="section_info" wx:if="{{state==0}}">
+    <text class='info_title'>关系</text>
+    <text class='info_attr'>{{info.relation}}</text>
+  </view>
+  <view class="section_info" bindtap='bindSendBug'>
+    <text class='info_title'>错误反馈</text>
+  </view>
+  <button hover-class='hover' class='logoff_button' bindtap='doLogoff' >切换群</button>
+</view>

@@ -1,0 +1,8 @@
+  {
+    "navigationBarBackgroundColor": "#FFFFFF",
+    "navigationBarTextStyle": "black",
+    "backgroundTextStyle": "black",
+    "enablePullDownRefresh": true,
+    "navigationBarTitleText": "创建班级名单",
+    "backgroundColor": "#FFFFFF"
+  }

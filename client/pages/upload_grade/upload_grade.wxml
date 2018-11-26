@@ -1,0 +1,31 @@
+<view class='container'>
+<view class='nav'>
+      <view class='select_name'><text>姓名</text></view>
+      <view class='select_grade'><text>优</text></view>
+      <view class='select_grade'><text>良</text></view>
+      <view class='select_grade'><text>及格</text></view>
+      <view class='select_grade'><text>差</text></view>
+      <view class='select_grade'><text>未交</text></view>
+</view>
+<form bindsubmit="formSubmit">
+  <scroll-view  class="student_list" scroll-y="true" scrollTop="0">
+    <view wx:for="{{students}}" class='grade'>
+      <view class='select_name'>
+        <text>{{item.nickname}}</text>
+      </view>
+      <view class='onegrade'>
+        <radio-group name="{{item.student_id}}">
+          <label class='select'>
+            <radio checked="true" value="0" color='#009688'/>
+            <radio value="1" color='#009688'/>
+            <radio value="2" color='#009688'/>
+            <radio value="3" color='#009688'/>
+            <radio value="4" color='#009688'/>
+           </label>
+          </radio-group>
+        </view>
+      </view>
+</scroll-view>
+<button hover-class='hover' formType="submit" class='submit_button'>提交</button>
+</form>
+</view>

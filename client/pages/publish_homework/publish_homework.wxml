@@ -1,0 +1,16 @@
+<view class='container'>
+  <form bindsubmit='submit'>
+    <view class="section">    
+      <textarea class='content'auto-height 
+      name="content" value="{{homeworkValue}}" placeholder="今天的作业是..."></textarea>
+    </view>
+    <view class='upload'>
+       <button wx:if="{{imgUrl==''}}" bindtap='doUpload' hover-class='hover' class='select_button'>选择图片</button> 
+       <image wx:else class="uploader-image" src="{{imgUrl}}" mode="aspectFill" bindtap="doUpload"></image> 
+    </view>
+    <button form-type='submit'  hover-class='hover'  class='submit' disabled='{{submit_button_locker}}'>发布</button>
+  </form>
+</view>
+
+
+

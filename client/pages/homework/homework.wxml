@@ -1,0 +1,120 @@
+<view class='selector_group'>
+  <view class='{{listIndex==0?"selector_selected":"selector"}}' hover-class='hover' 
+   hover-stay-time='100' bindtap='bindSelectItem' data-listindex='0'>
+    <text>{{markStateList[markStateIndex].mark_name}}</text>
+    <image class='selector_icon' src='{{listIndex==0?up_img:down_img}}'></image>
+  </view>
+  <view class='{{listIndex==1?"selector_selected":"selector"}}' hover-class='hover' 
+  hover-stay-time='100' bindtap='bindSelectItem' data-listindex='1'>
+    <text>{{teacherStateList[teacherStateIndex].teacher_name}}</text>
+    <image class='selector_icon' src='{{listIndex==1?up_img:down_img}}'></image>
+  </view>
+  <view class='{{listIndex==2?"selector_selected":"selector"}}' hover-class='hover'
+   hover-stay-time='100' bindtap='bindSelectItem' data-listindex='2'>
+    <text>{{dateStateList[dateStateIndex].date_name}}</text>
+    <image class='selector_icon' src='{{listIndex==2?up_img:down_img}}'></image>
+  </view>
+</view>
+<block wx:if="{{state==1}}">
+  <view class='container'>
+    <view wx:if="{{next_index==0}}" class='note'>
+      <text>暂无作业</text>
+    </view> 
+    <view class="homework" wx:for="{{homework}}">
+      <view class="flex-wrp" style="flex-direction:row;">
+        <image class="tx" src="{{item.avatarUrl}}" mode="aspectFit"></image>
+          <text class="pname">{{item.course+" "+item.publisher_name}}</text>
+          <text class="ptime">{{item.time}}</text>
+      </view>
+      <view class='content'>
+        <text class="text_con">{{item.content}}</text>
+        <image class="img_con" wx:if="{{item.img_url!=null}}"  src="{{item.img_url}}" mode="aspectFill" data-src="{{item.img_url}}" bindtap="previewImage"></image>
+      </view>
+      <view class='interaction'>
+        <text class="time_con">平均作业时间：{{item.avg_time==null?'未统计完成\n':item.avg_time+'分钟\n'}}</text>
+        <text class='time_con'>作业批改情况：</text>
+        <!--msg|用于判断作业批改情况  -->
+        <text wx:if='{{!item.is_marked&&item.can_mark}}'class='time_con' style='color:red' bindtap='doUploadGrade' data-id='{{item.homework_id}}'>点击批改</text>
+        <text wx:elif='{{item.is_marked}}'class='time_con'>已批改</text>
+        <text wx:else='{{!item.is_marked&&!item.can_mark}}'class='time_con'>未批改</text>
+        <!--msg|判断结束  -->
+      </view>
+    </view>
+    <view wx:if="{{next_index!=0&&!can_reach}}" class='note'>
+      <text >已经到底啦</text>
+    </view>
+    <view class="white_background">
+      <view hover-class='hover' class='button_add_view' bindtap='doAddButton' hover-stay-time='100'>
+        <image class='button_add' src='../../resources/add.png'></image>
+      </view>
+    </view>
+  </view>
+</block>
+
+<!--msg|家长的渲染  -->
+
+<block wx:else>
+  <view class='container'>
+    <view wx:if="{{next_index==0}}" class='note'>
+      <text>暂无作业</text>
+    </view> 
+    <view class="homework" wx:for="{{homework}}">
+      <view class="flex-wrp" style="flex-direction:row;">
+        <image class="tx" src="{{item.avatarUrl}}" mode="aspectFit"></image>
+          <text class="pname">{{item.course+" "+item.publisher_name}}</text>
+          <text class="ptime">{{item.time}}</text>
+      </view>
+      <view class='content'>
+        <text class="text_con">{{item.content}}</text>
+        <image class="img_con" wx:if="{{item.img_url!=null}}" 
+          src="{{item.img_url}}" mode="aspectFill" 
+          data-src="{{item.img_url}}" bindtap="previewImage"></image>
+      </view>
+      <view class='interaction'>
+        <text class='time_con'>作业批改情况：</text>
+        <!--msg|用于判断作业批改情况  -->
+        <text wx:if='{{item.level==-1}}'class='time_con'>未批改{{'\n'}}</text>
+        <text wx:elif='{{item.level==0}}' class='time_con'>优{{'\n'}}</text>
+        <text wx:elif='{{item.level==1}}' class='time_con'>良{{'\n'}}</text>
+        <text wx:elif='{{item.level==2}}' class='time_con'>及格{{'\n'}}</text>
+        <text wx:elif='{{item.level==3}}' class='time_con'>差{{'\n'}}</text>
+        <text wx:elif='{{item.level==4}}' class='time_con'>未交{{'\n'}}</text>
+        <!--msg|判断结束  -->
+        <text class="time_con">作业时间反馈：</text>
+        <!--msg|用于判断作业反馈情况  -->
+         <text wx:if="{{item.can_upload_time}}" class='time_con' catchtap='doUploadTime'
+               style='color:red' data-id='{{item.homework_id}}'>点击反馈</text>
+        <text wx:else class='time_con'>已反馈</text>
+        <!--msg|判断结束  -->
+      </view>
+    </view>
+    <view wx:if="{{next_index!=0&&!can_reach}}" class='note'>
+      <text >已经到底啦</text>
+    </view>
+  </view>
+</block>
+
+<!--[msg|选择框弹出-->
+
+<view class='mask' wx:if="{{selectorState}}">
+  <view class='selector_list'>
+    <block wx:for="{{markStateList}}" wx:if="{{listIndex==0}}">
+      <view class='{{markStateIndex==item.mark_id?"selector_item_selected":"selector_item"}}' data-id='{{item.mark_id}}' 
+        hover-class='hover' bindtap='doSelectMark'>
+        <text>{{item.mark_name}}</text>
+      </view>
+    </block>
+    <block wx:for="{{teacherStateList}}" wx:if="{{listIndex==1}}">
+      <view class='{{teacherStateIndex==item.teacher_id?"selector_item_selected":"selector_item"}}'
+        data-id='{{item.teacher_id}}' hover-class='hover' bindtap='doSelectTeacher'>
+        <text>{{item.teacher_name}}</text>
+      </view>
+    </block>
+    <block wx:for="{{dateStateList}}" wx:if="{{listIndex==2}}">
+      <view class='{{dateStateIndex==item.date_id?"selector_item_selected":"selector_item"}}' 
+        data-id='{{item.date_id}}' hover-class='hover' bindtap='doSelectDate'>
+        <text>{{item.date_name}}</text>
+      </view>
+    </block>
+  </view>
+</view> 

@@ -1,0 +1,8 @@
+  {
+    "navigationBarBackgroundColor": "#FFFFFF",
+    "navigationBarTextStyle": "black",
+    "backgroundTextStyle": "black",
+    "enablePullDownRefresh": true,
+    "navigationBarTitleText": "完善个人信息",
+    "backgroundColor": "#FFFFFF"
+  }

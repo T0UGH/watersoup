@@ -1,0 +1,23 @@
+<view class='container'>
+  <view class='item' hover-class='hover' hover-stay-time='100'>
+    <image class='img' src='{{scheduleImg}}' mode='aspectFit'></image>
+    <view class='text_view' bindtap='bindClassSchedule'>
+      <text class='item_name'>课程表</text>
+      <text class='item_description'>看看今天有什么课</text>
+    </view>
+  </view>
+  <view class='item' hover-class='hover' hover-stay-time='100'>
+    <image class='img' src='{{studentListImg}}' mode='aspectFit'></image>
+    <view class='text_view' bindtap='bindClassList'>
+      <text class='item_name'>班级名单</text>
+      <text class='item_description'>点击查看班级名单</text>
+    </view>
+  </view>
+  <view class='item' hover-class='hover' hover-stay-time='100'>
+    <image class='img' src='{{calendarImg}}' mode='aspectFit'></image>
+    <view class='text_view' bindtap='bindTimeTable'>
+      <text class='item_name'>作息表</text>
+      <text class='item_description'>规律的作息很重要</text>
+    </view>
+  </view>
+</view>

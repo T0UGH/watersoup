@@ -1,0 +1,167 @@
+/* pages/handle_class/handle_class.wxss */
+page{
+  background-color: #f5f5f5;
+  box-shadow: 0rpx 5rpx 5rpx #888888 inset;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+}
+.header{
+  margin-top: 30rpx;
+  margin-bottom: 30rpx;
+  text-align: center;
+  color: #01B703;
+  font-size: 40rpx;
+}
+.student_list{
+  height: 870rpx;
+  white-space:nowrap;
+  border-top: 1rpx solid #8E8E8E;
+}
+::-webkit-scrollbar{
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+.nav{
+  display: flex;
+  flex-direction:row;
+  justify-content:space-around;
+  font-size: 34rpx;
+  color: #707070;
+  background-color: rgb(255,255,255);
+}
+.nav label{
+  width: 220rpx;
+  
+  text-align: center;
+  overflow: hidden;
+  padding-top: 35rpx;
+  padding-bottom: 30rpx;
+}
+.line{
+  display: flex;
+  flex-direction:row;
+  justify-content:space-around;
+  color: #707070;
+}
+
+.student_id,.student_sex,.student_name{
+  width: 240rpx;
+  text-align: center;
+}
+
+.mask{
+  position:fixed;
+  z-index: 3;
+  height: 100%;
+  width: 750rpx;
+  top: 0rpx;
+  left: 0rpx;
+  background-color:rgba(0, 0, 0, 0.3);
+}
+.section_blue,.section_white,.section_select{
+  display: flex;
+  flex-direction:row;
+  justify-content:space-around;
+  margin: 0;
+  color: #707070;
+  font-size: 36rpx;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+}
+.section_blue{
+  color: #212121;
+  background-color:#01B703;
+}
+.section_white{
+  color: #212121;
+    background-color: rgb(255,255,255);
+}
+.section_select{
+  color: #FFFFFF;
+  background-color: #1EA4FF;
+  font-weight: bold;
+}
+.button_group{
+  margin-top: 60rpx;
+  height: 70rpx;
+  width: 670rpx;
+  display: flex;
+  text-align: center;
+}
+.button{
+  margin-left:0rpx;
+  margin-right:8rpx;
+  padding-left:5rpx;
+  padding-right:5rpx;
+  width: 105rpx;
+  background-color: #1EA4FF;
+  color: #FFF;
+  font-size: 30rpx;
+  letter-spacing:3rpx;
+  border-radius: 0rpx;  
+  height: 70rpx;
+  line-height: 70rpx;
+  box-shadow: 0rpx 2rpx 2rpx #888888 ; 
+}
+.dialog_section text {
+  flex: 1;
+}
+
+.dialog_section input {
+  width: 150rpx;
+  text-align: right;
+}
+.dialog_header{
+  display:flex;
+  padding-top:20rpx;
+  padding-bottom:10rpx;
+  color:#212121;
+  font-size:34rpx;
+}
+.text_header{
+  text-align: center;
+  width: 450rpx;
+}
+.dialog{
+  padding: 40rpx;
+  margin-top: 200rpx;
+  width: 450rpx;
+  margin-left: 110rpx;
+  height: 600rpx;
+  background-color:white;
+  opacity:1;
+}
+.submit {
+  background-color:rgb(68,138,255);
+  color: #FFF;
+  font-size: 32rpx;
+  height: 60rpx;
+   /*[msg|这个到时候自己改*/
+  margin-top: 80rpx;
+  line-height: 60rpx;
+  box-shadow: 0rpx 5rpx 5rpx #888888 ;
+  border-radius:0px;
+}
+.dialog_section{
+  display:flex;
+  padding-top:60rpx;
+  padding-bottom:10rpx;
+  padding-left:20rpx;
+  margin-bottom: 20rpx;
+  border-bottom:2rpx solid #8E8E8E;
+  color:#212121;
+  font-size:32rpx;
+  align-items:center;
+}
+.student_list label{
+  width: 220rpx;
+  text-align: center;
+  overflow: hidden;
+  padding-top: 35rpx;
+  padding-bottom: 30rpx;
+
+}
+

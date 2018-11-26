@@ -1,0 +1,28 @@
+/* pages/create/create.wxss */
+page{
+  background-color: #f5f5f5;
+  box-shadow: 0rpx 5rpx 5rpx #888888 inset;
+}
+.section text {
+  flex: 1;
+}
+
+.section input {
+  width: 400rpx;
+  text-align: right;
+}
+
+.register {
+  background-color:  	rgb(68,138,255);
+  color: #fff;
+  font-size: 40rpx;
+  height: 80rpx;
+   /*[msg|这个到时候自己改*/
+  margin-top: 780rpx;
+  line-height: 80rpx;
+  box-shadow: 0rpx 3rpx 3rpx #888888 ;
+  border-radius:0px;
+}
+.hover_register{
+  opacity: 0.7;
+}

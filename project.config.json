@@ -1,0 +1,243 @@
+{
+	"miniprogramRoot": "./client",
+	"qcloudRoot": "./server",
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"appid": "wxee6e3f1721fc1c61",
+	"projectname": "watersoup",
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": 0,
+					"name": "loginWithGroup",
+					"pathName": "pages/start/start",
+					"query": "",
+					"scene": "1044",
+					"shareInfo": {
+						"groupName": "测试模拟群3",
+						"shareName": "vMXyLSte0kljPdMsVaxPCQjJ6EJFru4wCke34EkxBCY@cr4dev",
+						"shareKey": "V3ZY2O3NUXo-G3F5QgGOExfQWWhmjqPsJ59iL2R3_BWnGF9ExPsh6-limIDLdWUDkN0aFonZcVpvcswrWUc0_Q~~"
+					}
+				},
+				{
+					"id": 1,
+					"name": "withOutshare",
+					"pathName": "pages/start/start",
+					"query": "",
+					"scene": "1001"
+				},
+				{
+					"id": 2,
+					"name": "init_role",
+					"pathName": "pages/init_role/init_role",
+					"query": "has_init_group=0"
+				},
+				{
+					"id": -1,
+					"name": "init_role",
+					"pathName": "pages/init_teacher/init_teacher",
+					"query": "has_init_group=0"
+				},
+				{
+					"id": -1,
+					"name": "init_teacher",
+					"pathName": "pages/init_teacher/init_teacher",
+					"query": ""
+				},
+				{
+					"id": 5,
+					"name": "publish_homework",
+					"pathName": "pages/publish_homework/publish_homework",
+					"query": ""
+				},
+				{
+					"id": 6,
+					"name": "get_auth",
+					"pathName": "pages/get_auth/get_auth",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "get_auth",
+					"pathName": "pages/share/share",
+					"query": ""
+				},
+				{
+					"id": 8,
+					"name": "withOutshare",
+					"pathName": "pages/upload_grade/upload_grade",
+					"query": "",
+					"scene": "1001"
+				},
+				{
+					"id": -1,
+					"name": "wi",
+					"pathName": "pages/upload_grade/upload_grade",
+					"query": "",
+					"scene": "1001"
+				},
+				{
+					"id": -1,
+					"name": "wi",
+					"pathName": "pages/upload_time/upload_time",
+					"query": "",
+					"scene": "1001"
+				},
+				{
+					"id": -1,
+					"name": "login2",
+					"pathName": "pages/start/start",
+					"query": "",
+					"scene": "1044",
+					"shareInfo": {
+						"groupName": "测试模拟群1",
+						"shareName": "vMXyLSte0kljPdMsVaxPCTL0pcaf5ZPaPJchGNuRA6s@cr4dev",
+						"shareKey": "G8QmF0Bf_o-4HYs5WlNR5divI2wyWVvVE8AsKM3dq9fvY4lY_m8mA6oqiEEzXAem36gAhIROtyhaG2iYcLNUOw~~"
+					}
+				},
+				{
+					"id": -1,
+					"name": "class",
+					"pathName": "pages/init_class/init_class",
+					"query": "",
+					"scene": "1044",
+					"shareInfo": {
+						"groupName": "测试模拟群1",
+						"shareName": "vMXyLSte0kljPdMsVaxPCTL0pcaf5ZPaPJchGNuRA6s@cr4dev",
+						"shareKey": "G8QmF0Bf_o-4HYs5WlNR5divI2wyWVvVE8AsKM3dq9fvY4lY_m8mA6oqiEEzXAem36gAhIROtyhaG2iYcLNUOw~~"
+					}
+				},
+				{
+					"id": -1,
+					"name": "class",
+					"pathName": "pages/start/start",
+					"query": "",
+					"scene": "1044",
+					"shareInfo": {
+						"groupName": "测试模拟群8",
+						"shareName": "vMXyLSte0kljPdMsVaxPCeUlnG-zVfSYSZPCGPjotbo@cr4dev",
+						"shareKey": "LfrXSxHwQKeovadYUJwsa_FFN0aQD_lpzq28pn8o26gcbZ4JwHYjy9prR6Rc_2WnUUNXjdBZoOsqNnJuPyYSLQ~~"
+					}
+				},
+				{
+					"id": -1,
+					"name": "loginWithG8",
+					"pathName": "pages/start/start",
+					"query": "",
+					"scene": "1044",
+					"shareInfo": {
+						"groupName": "测试模拟群8",
+						"shareName": "vMXyLSte0kljPdMsVaxPCeUlnG-zVfSYSZPCGPjotbo@cr4dev",
+						"shareKey": "5lo37sm8aWW3kG1vz-DrDStxyCwFv8H8bJWteyYiD3slHZYV9B8Wp9hia-t0ZVLItg8wD1Zkrol2eU0JVVuvpQ~~"
+					}
+				},
+				{
+					"id": -1,
+					"name": "loginWithGroup",
+					"pathName": "pages/init_teacher/init_teacher",
+					"query": "",
+					"scene": "1044",
+					"shareInfo": {
+						"groupName": "测试模拟群1",
+						"shareName": "vMXyLSte0kljPdMsVaxPCTL0pcaf5ZPaPJchGNuRA6s@cr4dev",
+						"shareKey": "cmdCUaI-3TfLFL1ZFuMqKCj4Nuzanu-rvrQG8rBYk3xSrHD0BoKk0_zZPxWojRMPoDkUqMTS-NFo56VCZzH4eA~~"
+					}
+				},
+				{
+					"id": -1,
+					"name": "init_parent",
+					"pathName": "pages/init_parent/init_parent",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "upload_time",
+					"pathName": "pages/upload_time/upload_time",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "upload_time",
+					"pathName": "pages/publish_homework/publish_homework",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "init_class",
+					"pathName": "pages/init_class/init_class",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "init_parent",
+					"pathName": "pages/init_parent/init_parent",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "init_parent",
+					"pathName": "pages/init_parent/init_parent",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "init_parent",
+					"pathName": "pages/upload_grade/upload_grade",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "class_schedule",
+					"pathName": "pages/class_schedule/class_schedule",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "init",
+					"pathName": "pages/init_class/init_class",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "sdf",
+					"pathName": "pages/init_parent/init_parent",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "sdf",
+					"pathName": "pages/init_teacher/init_teacher",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "sdf",
+					"pathName": "pages/init_parent/init_parent",
+					"query": ""
+				}
+			]
+		}
+	}
+}

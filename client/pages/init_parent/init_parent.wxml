@@ -1,0 +1,30 @@
+<!--pages/create/create.wxml-->
+<view class="container">
+  <form bindsubmit='formSubmit'>
+    <!-- <view class="section">
+      <text class="attr_name">电话</text>
+      <input name="tel" value="" auto-focus />
+    </view> -->
+    <!-- <view class="section">
+      <text class="attr_name">性别</text>
+      <radio-group name="sex">
+        <label wx:for="{{sex}}">
+          <radio color='#009688' value="{{item.value}}" checked="{{item.checked}}" class='radio_sex'/>{{item.name}}
+        </label>
+      </radio-group>
+    </view> -->
+    <view class="section">
+      <text class="attr_name">学生</text>
+      <picker bindchange="bindStudentPickerChange" value="{{student_index}}" range="{{txtarray}}">
+        <view>{{txtarray[student_index]}}</view>
+      </picker>
+    </view>
+    <view class="section">
+      <text class="attr_name">与孩子的关系</text>
+      <picker bindchange="bindRelationPickerChange" value="{{index}}" range="{{relationarray}}">
+        <view>{{relation}}</view>
+      </picker>
+    </view>
+    <button form-type='submit' class='register' hover-class='hover_register'>下一步</button>
+  </form>
+</view>

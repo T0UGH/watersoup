@@ -1,0 +1,6 @@
+<view class='container'>
+  <image class='logo' src='{{imgurl}}'></image>
+  <button hover-class='hover' class='getUserInfo_button' 
+    open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">授权并登陆</button>
+  <text class='instruction'>说明：首次使用本小程序需要您授权以及登录，之后便可直接进入。</text>
+</view>

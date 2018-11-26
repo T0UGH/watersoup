@@ -1,0 +1,65 @@
+<view class="top">
+  <view wx:for="{{['一','二','三','四','五','六','日']}}" class="top-text">周{{item}}</view>
+</view>
+  <view style="height:800rpx;width:730rpx;display:flex;">
+    <view>
+      <view wx:for="{{[1,2,3,4,5,6,7,8]}}" class="left">
+        {{item}}
+      </view>
+    </view>
+    <view wx:for="{{[1,2,3,4,5,6,7,8]}}">
+      <view style="width:750rpx;margin-top:{{(index+1)*100}}rpx;  position: absolute;border-bottom:1rpx solid lightgray;"><!--上下午分割-->
+      </view>
+    </view>
+
+    <!--课表-->
+    <view wx:for="{{display}}">
+      <view class="flex-item kcb-item{{index==selectIndex?'-select':''}}" bindtap="on_Chose" data-statu="open" 
+      data-index="{{index}}" 
+      style="margin-left:{{(item.week-1)*100}}rpx;margin-top:{{(item.base-1)*100+5}}rpx;height:{{item.len*100-5}}rpx;" >
+        <view class="smalltext" >{{item.course}}</view>
+      </view>
+    </view>
+  </view>
+  <view class='button_group' wx:if="{{isHeadMaster}}">
+    <button hover-class='hover' bindtap='bindEditButton' 
+        class='button'>{{editState?'完成':'编辑'}}</button>
+    <button wx:if="{{editState}}" hover-class='hover' bindtap='bindModify' class='button'>增改</button>
+    <button wx:if="{{editState}}" hover-class='hover' bindtap='bindDelete' class='button'>删除</button>
+  </view>
+<!--[msg|对话框弹出]-->
+<view class='mask' wx:if="{{dialogState}}">
+  <view class='dialog'>
+  <form bindsubmit='formSubmit'>
+    <view class="dialog_header">
+      <text class='text_header'>更改时间表</text>
+    </view>
+    <view class="dialog_section">
+      <text class='info_title'>星期</text>
+      <text class='info_attr'>{{week[week_value]}}</text>
+    </view>
+    <view class="dialog_section">
+      <text class='info_title'>开始节次</text>
+      <text class='info_attr'>{{base[base_value]}}</text>
+    </view>
+    <view class="dialog_section" wx:if="{{deleteState}}">
+      <text class='info_title'>当前课程</text>
+      <text class='info_attr'>{{display[selectIndex].course}}</text>
+    </view>
+    <view class="dialog_section">
+      <text class="info_title">课长</text>
+      <picker bindchange="bindLenPickerChange" value="{{index}}" range="{{len}}">
+        <view>{{len[len_value]}}节</view>
+      </picker>
+    </view>
+    <view class="dialog_section">
+      <text class="info_title">{{deleteState?"更改课程为":"选择课程为"}}</text>
+      <picker bindchange="bindLessonPickerChange" value="{{lesson_index}}" range="{{txtarray}}">
+        <view>{{txtarray[lesson_index]}}</view>
+      </picker>
+    </view>
+      <!-- <button wx:if="{{deleteState}}" hover-class='hover' bindtap='deleteClass_Schedule' class='upload_button'>删除</button> -->
+      <button class='upload_button' hover-class='hover' form-type='submit'>提交</button>
+  </form>
+</view>
+</view> 

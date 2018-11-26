@@ -1,0 +1,19 @@
+<view class='container'>
+  <form bindsubmit='formSubmit'>
+    <view class="section">
+      <text>使用时间</text>
+      <picker name="using_time" mode="time" value="{{using_time}}" start="00:00" end="03:01" bindchange="bindTimeChange">
+        <view>{{using_time}}</view>
+      </picker>
+    </view>
+    <view class="section">
+      <text>作业评价</text>
+      <radio-group name="comment">
+        <label wx:for="{{level}}">
+          <radio value="{{item.value}}" color='rgb(68,138,255)' checked="{{item.checked}}"/>{{item.name}}
+        </label>
+      </radio-group>
+    </view>
+    <button class='submit' hover-class='hover' form-type='submit'>提交</button>
+  </form>
+</view>

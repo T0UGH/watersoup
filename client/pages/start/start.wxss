@@ -1,0 +1,12 @@
+page{
+  background-color: #f5f5f5;
+  box-shadow: 0rpx 5rpx 5rpx #888888 inset;
+}
+.progress{
+  margin-top: 520rpx;
+}
+.instruction{
+  font-size: 32rpx;
+  color: #707070;
+  text-align: center;
+}

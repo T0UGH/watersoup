@@ -1,0 +1,8 @@
+  {
+    "navigationBarBackgroundColor": "#FFFFFF",
+    "navigationBarTextStyle": "black",
+    "backgroundTextStyle": "black",
+    "enablePullDownRefresh": true,
+    "navigationBarTitleText": "发布作业",
+    "backgroundColor": "#FFFFFF"
+  }

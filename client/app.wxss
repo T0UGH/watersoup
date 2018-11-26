@@ -1,0 +1,20 @@
+.hover{
+  opacity: 0.7
+}
+.container {
+  width: 670rpx;
+  padding-left: 40rpx;
+  padding-right: 40rpx;
+  padding-top: 40rpx;
+}
+.section {
+  display: flex;
+  margin-top: 15rpx;
+  padding-top: 70rpx;
+  padding-bottom: 10rpx;
+  padding-left: 40rpx;
+  border-bottom: 2rpx solid #8E8E8E;
+  color: #212121;
+  font-size: 36rpx;
+  align-items: center;
+}

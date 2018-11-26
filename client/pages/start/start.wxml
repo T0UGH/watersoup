@@ -1,0 +1,7 @@
+<!--pages/start/start.wxml-->
+<view class="container">
+  <progress class='progress' percent="{{progress}}" color='rgb(68,138,255)' active active-mode='forwards'/>
+  <view class='instruction'>
+    <text>{{prompt}}</text>
+  </view>
+</view>

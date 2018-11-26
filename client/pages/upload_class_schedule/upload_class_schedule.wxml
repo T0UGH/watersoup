@@ -1,0 +1,29 @@
+<view class="container">
+  <form bindsubmit='formSubmit'>
+    <view class="section">
+      <text class="attr_name">星期</text>
+      <picker bindchange="bindWeekPickerChange" value="{{index}}" range="{{week}}">
+        <view>{{week[week_value]}}</view>
+      </picker>
+    </view>
+    <view class="section">
+      <text class="attr_name">开始节次</text>
+      <picker bindchange="bindBasePickerChange" value="{{index}}" range="{{base}}">
+        <view>{{base[base_value]}}</view>
+      </picker>
+    </view>
+    <view class="section">
+      <text class="attr_name">课长</text>
+      <picker bindchange="bindLenPickerChange" value="{{index}}" range="{{len}}">
+        <view>{{len[len_value]}}节</view>
+      </picker>
+    </view>
+    <view class="section">
+      <text class="attr_name">课程信息</text>
+      <picker bindchange="bindLessonPickerChange" value="{{lesson_index}}" range="{{txtarray}}">
+        <view>{{txtarray[lesson_index]}}</view>
+      </picker>
+    </view>
+    <button class='upload_button' hover-class='hover' form-type='submit'>提交</button>
+  </form>
+</view>

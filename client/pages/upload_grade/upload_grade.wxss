@@ -1,0 +1,67 @@
+page{
+  background-color: #f5f5f5;
+}
+.nav{
+  padding-bottom: 10rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+}
+.grade{
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 10rpx;
+  padding-bottom: 10rpx;
+}
+.select_grade{
+  width: 100rpx;
+  text-align: center;
+  color: #949494;
+}
+.select_name{
+  width: 150rpx;
+  padding-left: 10rpx;
+  text-align: left;
+  line-height: 60rpx;
+  color: #949494;
+}
+.select{
+  width: 506rpx;
+  flex-direction: row;
+  justify-content: space-around;
+  display: flex;
+  align-items: center;
+}
+radio{
+  width:60rpx;
+  background: #f5f5f5;
+}
+.onegrade{
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+}
+
+.submit_button {
+  background-color: rgb(68,138,255);
+  color: #ffffff;
+  font-size: 40rpx;
+  border-radius: 0rpx;  
+  height: 80rpx;
+  line-height: 80rpx;
+  box-shadow: 0rpx 5rpx 5rpx #888888 ;
+  position: fixed;
+  bottom: 80rpx;
+  width: 670rpx;
+}
+.student_list{
+  height: 840rpx;
+  white-space:nowrap;
+}
+::-webkit-scrollbar{
+  width: 0;
+  height: 0;
+  color: transparent;
+}

@@ -1,0 +1,14 @@
+<!--pages/share/share.wxml-->
+<view class='container'>
+  <image class='logo' src='{{imgurl}}'></image>
+  <button hover-class='hover' open-type='share' class='share_button'>分享至群聊 创建群作业</button>
+  <scroll-view scroll-y="true" scrollTop="0" class="group_list">
+  <view wx:for="{{groups}}" class='content'>
+    <open-data type="groupName" class="select" open-gid="{{item.open_gid}}"></open-data>
+    <button hover-class='hover' class='in_button' bindtap='doEnterGroup' data-opengid='{{item.open_gid}}'>进入</button>
+  </view>
+  </scroll-view>
+  <view class='instruction_view'>
+    <text class='instruction'>说明：本小程序主要面向初中、小学家长和教师来发布和反馈作业。首次使用需分享至某一以老师家长为主的微信群聊才能使用</text>
+  </view>
+</view>

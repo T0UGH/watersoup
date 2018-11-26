@@ -1,0 +1,22 @@
+.attr_name{
+  color:#000000;
+}
+.section text {
+  flex: 1;
+}
+
+.section input {
+  width: 400rpx;
+  text-align: right;
+}
+.upload_button{
+  background-color:  	rgb(68,138,255);
+  color: #fff;
+  font-size: 40rpx;
+  height: 80rpx;
+   /*[msg|这个到时候自己改*/
+  margin-top: 200rpx;
+  line-height: 80rpx;
+  box-shadow: 0rpx 3rpx 3rpx #888888 ;
+  border-radius:0px;
+}
